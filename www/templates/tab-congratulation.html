@@ -1,0 +1,23 @@
+<ion-view view-title="Congratulations">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="img/user.jpg">
+        <h2>{{userData.firstname}} {{userData.lastname}}</h2>
+        <p>{{userData.email}}</p>
+      </div>
+      </div>
+      <div class="item item-body">
+        <img class="full-image" src="img/logo-intandem.png">
+          <p>Help us to improve inTandem!</p>
+          <p>We will send you updates with great new functionalities... asking you which feature you would like to be the next!</p>
+          <p>
+            <div class="subdued">Your unlock code is <span class="code">{{unlookCode}}</span></div>
+          </p>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <div class="tab-item" ng-click="tour()"><i class="icon ion-ios-play"></i> Take a tour</div>
+      </div>
+    </div>  
+  </ion-content>
+</ion-view>

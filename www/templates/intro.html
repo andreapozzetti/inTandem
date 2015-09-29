@@ -1,0 +1,61 @@
+<ion-view view-title="inTandem">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon ion-skip-forward button-clear no-animation" ng-click="startApp()" ng-show="!slideIndex">
+    </button>
+    <button class="button button-icon ion-arrow-left-b button-clear no-animation" ng-click="previous()" ng-show="slideIndex > 0">
+    </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right"> 
+    <button class="button button-icon ion-arrow-right-b button-clear no-animation" ng-click="next()" ng-show="slideIndex != 5">
+    </button>
+    <button class="button button-clear no-animation" ng-click="startApp()" ng-show="slideIndex == 5">
+      End
+    </button>
+  </ion-nav-buttons>
+  <ion-slide-box on-slide-changed="slideChanged(index)">
+    <ion-slide>
+      <h3>Welcome to inTandem!</h3>
+        <div id="logo" class="full-image">
+          <img src="img/logo-intandem-intro.png">
+        </div>
+        <h4>Welcome Week 2015</h4>
+        <h5>28 September – 1 October</h5>
+        <br />
+        <p>Let me show you how inTandem works...</p>
+    </ion-slide>
+    <ion-slide>
+      <h5>Mario is an Italian student who wants to learn Japanese...</h5>
+      <div id="logo">
+        <img src="img/walk-1.png">
+      </div>
+      <h5>He loves to meet new people so he decides to look for a linguistic tandem.</h5>
+    </ion-slide>
+    <ion-slide>
+      <h5>He is studying at the university and can go out and meet people only in the evening.</h5>
+      <div id="logo">
+        <img src="img/walk-2.png">
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <h5>He loves to talk about cooking... </h5>
+      <div id="logo">
+        <img src="img/walk-3.png">
+      </div>
+      <h5>...and always posts photos of his recipes on his Facebook and Instagram page</h5>
+    </ion-slide>
+    <ion-slide>
+      <h5>inTandem is able to look at Mario's profiles on Social Networks and retrieve all information...</h5>
+      <div id="logo">
+        <img src="img/walk-4.png">
+      </div>
+      <h5>...and listen to other users' profiles to find interesting activities and events they are talking about in his area!</h5>
+    </ion-slide>
+    <ion-slide>
+      <h5>With inTandem Mario can find the best linguistic tandem matching his skills, interests and calendar... </h5>
+      <div id="logo">
+        <img src="img/walk-5.png">
+      </div>
+      <h5>without spending a minute writing boring descriptions, searching people with the same interests or arranging meetings!</h5>
+    </ion-slide>
+  </ion-slide-box>
+</ion-view>

@@ -1,0 +1,37 @@
+<ion-view view-title="Register">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <div>Your Unlock Code: <span class="code">{{code}}</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <p>Complete registration with Facebook</p>
+        <button class="button button-positive button-block" ng-click="facebookLogin()">
+          Register with Facebook
+        </button>
+        <p>or fill in the form</p>
+        <form name="userForm" ng-submit="login(user)" novalidate>
+          <div class="list">
+            <label class="item item-input" ng-class="{ 'has-error' : userForm.firstname.$invalid && !userForm.firstname.$pristine }">
+              <input type="text" placeholder="First Name" ng-model="user.firstname" required>
+              <p ng-show="userForm.firstname.$invalid && !userForm.firstname.$pristine" class="help-block">You firstname is required.</p>
+            </label>
+            <label class="item item-input" ng-class="{ 'has-error' : userForm.lastname.$invalid && !userForm.lastname.$pristine }">
+              <input type="text" placeholder="Last Name" ng-model="user.lastname" required>
+              <p ng-show="userForm.lastname.$invalid && !userForm.lastname.$pristine" class="help-block">You lastname is required.</p>
+            </label>
+            <label class="item item-input" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+              <input type="email" name="email" placeholder="E-mail" ng-model="user.email" required>
+              <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+            </label>
+            <button class="button button-block button-royal" ng-disabled="userForm.$invalid">
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
